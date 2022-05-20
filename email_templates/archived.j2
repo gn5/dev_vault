@@ -14,4 +14,11 @@ Size information of file list summarised by farm Unix group:
   {{ summary.size }}B across {{ summary.count }} files
 {% endfor %}
 {% endif -%}
+{% if filelist_as_attachement is defined and filelist_as_attachement == 'no' -%}
+The following {{n_files}} files have been archived:
+
+{% for file, file_meta in filelist.items() -%}
+{{ file_meta.filepath}}
+{% endfor -%}
+{%- endif %}
 HGI team

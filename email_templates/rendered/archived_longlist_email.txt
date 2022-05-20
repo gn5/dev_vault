@@ -15,5 +15,6 @@ Size information of file list summarised by farm Unix group:
 * unixgroup2 group in /lustre/../projects/unixgroup2:
   15 GiB across 600 files
 
+
 HGI team
 --- end email ---
