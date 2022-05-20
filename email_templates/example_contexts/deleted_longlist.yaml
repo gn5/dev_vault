@@ -1,0 +1,15 @@
+stakeholder: stakeholder
+n_files: 1000
+filelist_as_attachement: 'yes'
+deleted_within: '10 days'
+vault_documentation: https://confluence.sanger.ac.uk/display/HGI/Vault+Reference+Manual+for+Users
+filelist_lustre_path: '/lustre/../projects/unixgroup1/filelist.txt'
+summary:
+  unixgroup1:
+    path: '/lustre/../projects/unixgroup1'
+    size: '10 Gi'
+    count: 400
+  unixgroup2:
+    path: '/lustre/../projects/unixgroup2'
+    size: '15 Gi'
+    count: 600
