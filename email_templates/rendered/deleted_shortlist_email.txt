@@ -1,0 +1,21 @@
+--- example templated email ---
+--- email subject: /lustre data deleted ---
+--- start email ---
+Dear stakeholder,
+
+The following 3 have been deleted:
+
+/lustre/../projects/unixgroup1/file1
+/lustre/../projects/unixgroup1/file2
+/lustre/../projects/unixgroup2/file3
+
+Size information of file list summarised by farm Unix group:
+
+* unixgroup1 group in /lustre/../projects/unixgroup1:
+  10 GiB across 2 files
+
+* unixgroup2 group in /lustre/../projects/unixgroup2:
+  5 KiB across 1 files
+
+HGI team
+--- end email ---

@@ -1,0 +1,26 @@
+--- example templated email ---
+--- email subject: /lustre data deletion: 10 days notice ---
+--- start email ---
+Dear stakeholder,
+
+The following 3 files are scheduled for automated deletion in 10 days:
+
+/lustre/../projects/unixgroup1/file1
+/lustre/../projects/unixgroup1/file2
+/lustre/../projects/unixgroup2/file3
+
+You MUST act now to prevent any of these files from being deleted in 10 days!
+
+To do so, you can mark any of these files to be kept (i.e. preventing deletion) and/or automatically archived to humgen Irods, by using command-line tool 'vault' on the farm.
+Please refer to 'vault' documentation at https://confluence.sanger.ac.uk/display/HGI/Vault+Reference+Manual+for+Users or ask HGI.
+
+Size information of file list summarised by farm Unix group:
+
+* unixgroup1 group in /lustre/../projects/unixgroup1:
+  10 GiB across 2 files
+
+* unixgroup2 group in /lustre/../projects/unixgroup2:
+  5 KiB across 1 files
+
+HGI team
+--- end email ---
