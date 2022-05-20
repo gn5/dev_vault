@@ -2,19 +2,24 @@
 Dear {{ stakeholder }},
 
 {% if filelist_as_attachement is defined and filelist_as_attachement == 'no' -%}
-The following {{n_files}} files have been archived:
+The following {{n_files}} files are scheduled for automated deletion in {{deleted_within}}:
 
 {% for file, file_meta in filelist.items() -%}
 {{ file_meta.filepath}}
 {% endfor -%}
 {% else -%}
-/lustre data you own has been archived.
+/lustre data you own is scheduled for automated deletion in {{deleted_within}}.
 Full listing ({{n_files}} files) can be found in the attachment.
 {% if filelist_lustre_path is defined and filelist_lustre_path -%}
 This listing is also available on the farm at
 {{filelist_lustre_path}}
 {% endif %}
 {%- endif %}
+You MUST act now to prevent any of these files from being deleted in {{deleted_within}}!
+
+To do so, you can mark any of these files to be kept (i.e. preventing deletion) and/or automatically archived to humgen Irods, by using command-line tool 'vault' on the farm.
+Please refer to 'vault' documentation at {{vault_documentation}} or ask HGI.
+
 {% if summary is defined and summary -%}
 Size information of file list summarised by farm Unix group:
 {% for group, summary in (summary or {}).items() %}

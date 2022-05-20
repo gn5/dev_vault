@@ -4,6 +4,7 @@
 Dear stakeholder,
 
 /lustre data you own is scheduled for automated deletion in 10 days.
+
 Full listing (1000 files) can be found in the attachment.
 This listing is also available on the farm at
 /lustre/../projects/unixgroup1/filelist.txt
@@ -20,6 +21,7 @@ Size information of file list summarised by farm Unix group:
 
 * unixgroup2 group in /lustre/../projects/unixgroup2:
   15 GiB across 600 files
+
 
 HGI team
 --- end email ---

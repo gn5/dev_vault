@@ -1,20 +1,16 @@
 {# Copyright (c) 2020 - 2022 Genome Research Ltd. -#}
 Dear {{ stakeholder }},
 
-{% if filelist_as_attachement is defined and filelist_as_attachement == 'no' -%}
-The following {{n_files}} files are scheduled for automated deletion in {{deleted_within}}:
-
-{% for file, file_meta in filelist.items() -%}
-{{ file_meta.filepath}}
-{% endfor -%}
-{% else -%}
 /lustre data you own is scheduled for automated deletion in {{deleted_within}}.
+{% if filelist_as_attachement is defined and filelist_as_attachement == 'no' -%}
+Full listing ({{n_files}} files) can be found at the bottom of this e-mail.
+{% else %}
 Full listing ({{n_files}} files) can be found in the attachment.
-{% if filelist_lustre_path is defined and filelist_lustre_path -%}
+{% endif -%}
+{%- if filelist_lustre_path is defined and filelist_lustre_path -%}
 This listing is also available on the farm at
 {{filelist_lustre_path}}
 {% endif %}
-{%- endif %}
 You MUST act now to prevent any of these files from being deleted in {{deleted_within}}!
 
 To do so, you can mark any of these files to be kept (i.e. preventing deletion) and/or automatically archived to humgen Irods, by using command-line tool 'vault' on the farm.
@@ -26,5 +22,12 @@ Size information of file list summarised by farm Unix group:
 * {{ group }} group in {{ summary.path }}:
   {{ summary.size }}B across {{ summary.count }} files
 {% endfor %}
+{%- endif %}
+{% if filelist_as_attachement is defined and filelist_as_attachement == 'no' -%}
+The following {{n_files}} files are scheduled for automated deletion in {{deleted_within}}:
+
+{% for file, file_meta in filelist.items() -%}
+{{ file_meta.filepath}}
+{% endfor -%}
 {%- endif %}
 HGI team

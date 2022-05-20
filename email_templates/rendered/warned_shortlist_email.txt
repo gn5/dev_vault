@@ -3,11 +3,10 @@
 --- start email ---
 Dear stakeholder,
 
-The following 3 files are scheduled for automated deletion in 10 days:
-
-/lustre/../projects/unixgroup1/file1
-/lustre/../projects/unixgroup1/file2
-/lustre/../projects/unixgroup2/file3
+/lustre data you own is scheduled for automated deletion in 10 days.
+Full listing (3 files) can be found at the bottom of this e-mail.
+This listing is also available on the farm at
+/lustre/../projects/unixgroup1/filelist.txt
 
 You MUST act now to prevent any of these files from being deleted in 10 days!
 
@@ -21,6 +20,12 @@ Size information of file list summarised by farm Unix group:
 
 * unixgroup2 group in /lustre/../projects/unixgroup2:
   5 KiB across 1 files
+
+The following 3 files are scheduled for automated deletion in 10 days:
+
+/lustre/../projects/unixgroup1/file1
+/lustre/../projects/unixgroup1/file2
+/lustre/../projects/unixgroup2/file3
 
 HGI team
 --- end email ---

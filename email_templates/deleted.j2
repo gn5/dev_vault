@@ -2,7 +2,7 @@
 Dear {{ stakeholder }},
 
 {% if filelist_as_attachement is defined and filelist_as_attachement == 'no' -%}
-The following {{n_files}} have been deleted:
+The following {{n_files}} files have been deleted:
 
 {% for file, file_meta in filelist.items() -%}
 {{ file_meta.filepath}}
