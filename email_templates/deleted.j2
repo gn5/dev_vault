@@ -1,25 +1,17 @@
 {# Copyright (c) 2020 - 2022 Genome Research Ltd. -#}
 Dear {{ stakeholder }},
 
+/lustre data you own has been automatically deleted, in compliance with humgen farm data policy.
 {% if filelist_as_attachement is defined and filelist_as_attachement == 'no' -%}
-The following {{n_files}} files have been deleted:
-
-{% for file, file_meta in filelist.items() -%}
-{{ file_meta.filepath}}
-{% endfor -%}
-{% else -%}
-/lustre data you own has been deleted.
+Full listing ({{n_files}} files) can be found at the bottom of this e-mail.
+{% else %}
 Full listing ({{n_files}} files) can be found in the attachment.
-{% if filelist_lustre_path is defined and filelist_lustre_path -%}
-This listing is also available on the farm at
-{{filelist_lustre_path}}
-{% endif %}
-{%- endif %}
-{% if summary is defined and summary -%}
+{% endif -%}
+{% if summary is defined and summary %}
 Size information of file list summarised by farm Unix group:
 {% for group, summary in (summary or {}).items() %}
 * {{ group }} group in {{ summary.path }}:
   {{ summary.size }}B across {{ summary.count }} files
 {% endfor %}
-{%- endif %}
+{% endif -%}
 HGI team

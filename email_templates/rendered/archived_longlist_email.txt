@@ -3,10 +3,9 @@
 --- start email ---
 Dear stakeholder,
 
-/lustre data you own has been archived.
+/lustre data you own has been archived to humgen Irods.
+
 Full listing (1000 files) can be found in the attachment.
-This listing is also available on the farm at
-/lustre/../projects/unixgroup1/filelist.txt
 
 Size information of file list summarised by farm Unix group:
 
